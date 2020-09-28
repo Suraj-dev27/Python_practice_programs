@@ -25,11 +25,11 @@ def Comp_Choose():
         comp_choice="s"
     return comp_choice
 
-while True:
-    user_choice = User_Choose()
-    comp_choice = Comp_Choose()
 
-    if user_choice=="r":
+user_choice = User_Choose()
+comp_choice = Comp_Choose()
+
+if user_choice=="r":
         if comp_choice=="r":
             print("user selected Rock and computer selected Rock, match tied!!")
         elif comp_choice=="p":
@@ -38,8 +38,8 @@ while True:
         elif comp_choice=="s":
             print("user selected Rock and computer selected Scissors, User Wins!!")
             user_wins+=1
-
-    elif user_choice=="p":
+            
+elif user_choice=="p":
         if comp_choice=="r":
             print("user selected Paper and computer selected Rock, User Wins!!")
             user_wins+=1
@@ -49,7 +49,7 @@ while True:
             print("user selected Paper and computer selected Scissors, Computer Wins!!")
             comp_wins+=1
 
-    elif user_choice=="s":
+elif user_choice=="s":
         if comp_choice=="r":
             print("user selected Scissors and computer selected Rock, Computer Wins!!")
             comp_wins+=1
@@ -64,8 +64,10 @@ print("Computer Wins: "+ str(comp_wins))
 
 user_choice=input("Do you want to play again (y/n): ")
 if user_choice in ["yes","Yes","y","Y"]:
-    pass
+    User_hoose()
 elif user_choice in["no","No","n","N"]:
-    break
-else:
-    break
+    if user_wins > comp_wins:
+        print("User won the game!!")
+    else:
+        print("Computer won the game!!")
+print("Game has ended")
