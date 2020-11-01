@@ -1,4 +1,4 @@
-from collections import deque
+#from collections import deque
 '''class Queue:
     def __init__(self):
         self.buffer = deque()
@@ -31,7 +31,8 @@ Pass following list as an argument to place order thread,
 orders = ['pizza','samosa','pasta','biryani','burger']
 This problem is a producer,consumer problem where place_order() is producing orders whereas server_order() is consuming the food orders. Use Queue class implemented in a video tutorial.
 '''
-import time
+
+""" import time
 class Food_order:
     def __init__(self):
         self.buffer=deque()
@@ -58,11 +59,12 @@ class Food_order:
 
 
 pq=Food_order()
-pq.place_order(['pizza','samosa','pasta','biryani','burger'])
+pq.place_order(['pizza','samosa','pasta','biryani','burger']) """
+
 #pq.place_order('samosa')
 #pq.place_order('pasta')
 #pq.place_order('biryani')
 #pq.place_order('burger')
 #print(pq.buffer)
-print(pq.recieve_order())
+#print(pq.recieve_order())
 
