@@ -1,5 +1,5 @@
-#from collections import deque
-'''class Queue:
+""" from collections import deque
+class Queue:
     def __init__(self):
         self.buffer = deque()
     def enqueue(self,val):
@@ -15,10 +15,40 @@ pq=Queue()
 pq.enqueue({'name':'suraj','id':10})
 pq.enqueue({'name':'rohan','id':11})
 pq.enqueue({'name':'shubham','id':16})
+pq.enqueue([1,2,3])
 print(pq.buffer)
 print(pq.size())
 print(pq.is_empty())
-print(pq.dequeue())'''
+print(pq.dequeue()) """
+
+#practiece queue program again 
+""" from collections import deque
+import time
+class Queue:
+    def __init__(self):
+        self.buffer=deque()
+    def place_order(self,val):
+        for order in val:
+            time.sleep(0.5)
+            print('taking order of:',order)
+            self.buffer.appendleft(order)
+    def serve_order(self):
+        time.sleep(1)
+        while True:
+            if len(self.buffer)==0:
+                return("queue is empty, no more oreders")
+            else:
+                order=self.buffer.pop()
+                print('now serving:',order)
+            time.sleep(1)
+pq=Queue()
+val=['samosa','pizza','burger','vadapav']
+pq.place_order(val)
+print(pq.buffer)
+print(pq.serve_order()) """
+        
+    
+
 
 # exercise 1:
 '''
@@ -46,8 +76,6 @@ class Food_order:
         
 
     def recieve_order(self):
-        
-
         time.sleep(1)
         while True:
             if len(self.buffer)==0:
